@@ -30,8 +30,6 @@ RUN set -ex; \
     rm -rf /tmp/* /var/cache/apk/* /var/lib/apk/lists/*; \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
     echo "Asia/Shanghai" > /etc/timezone; \
-    mkdir -p /root/.ehforwarderbot/profiles/default/blueset.telegram /root/.ehforwarderbot/modules/
-
-VOLUME /root/.ehforwarderbot/profiles/default/blueset.telegram
+    mkdir -p /root/.ehforwarderbot/profiles/default
 
 ENTRYPOINT ["ehforwarderbot"]
